@@ -1,0 +1,19 @@
+---
+- name: Touch DNA center
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+
+     - name: Get Network Device By Serial Number by id
+       cisco.dnac.network_device_by_serial_number_info:
+         dnac_host: "{{ dnac_host }}"            # sandboxdnac.cisco.com
+         dnac_username: "{{ dnac_username }}"    # devnetuser
+         dnac_password: "{{ dnac_password }}"    # Cisco123!
+         dnac_verify: false
+         serialNumber: "{{ serialNumber }}"      # 9SB9FYAFA2O
+       register: result
+
+     - ansible.builtin.debug:
+         var: result
