@@ -1,0 +1,7 @@
+# all.yml
+# every group, regardless of name, will inherit these values
+# These are taken from the "cisco dev sandbox" see https://developer.cisco.com/sandbox.html for more info
+dnac_host: sandboxdnac.cisco.com
+dnac_username: devnetuser
+dnac_password: Cisco123!
+serialNumber: 9SB9FYAFA2O
