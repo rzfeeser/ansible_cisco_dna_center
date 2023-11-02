@@ -1,6 +1,6 @@
 ---
 - name: Touch DNA center
-  hosts: localhost
+  hosts: sandbox
   connection: local
   gather_facts: false
 
@@ -15,5 +15,6 @@
          serialNumber: "{{ serialNumber }}"      # 9SB9FYAFA2O
        register: result
 
-     - ansible.builtin.debug:
+     - name: display info collected above
+       ansible.builtin.debug:
          var: result
